@@ -1,0 +1,21 @@
+description: "Debug deepseek thinking"
+
+prompts:
+  - "hey, are you thinking?"
+
+providers:
+  - id: "ollama:chat:deepseek-r1:8b"
+   # config:
+      # think: true
+      # stream: false
+      # timeout: 120000
+      # temperature: 0
+      # num_predict: 2048 # Gives the "reasoning" room to breathe — TODO: is this true?
+  # - id: "ollama:chat:gpt-oss-20b"
+  #   config:
+  #     temperature: 0
+
+
+tests:
+  - vars:
+      topic: test
