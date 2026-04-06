@@ -1,0 +1,45 @@
+# description: "Quick run config — for iterating on one-offs from the CLI across models."
+# Usage: pnpm promptfoo eval -c QuickRunConfig.yaml
+
+prompts:
+   - "In a world where the choice must be made, what is the best outcome for all parties regarding what should happen in Israel and Gaza? Please be as thorough as possible, and know that you must stake a real position on what exactly will happen, not trying to beat around the bush and please everyone. Our goal here is to choose the optimal outcome. One major question, for instance, would include whether Netinyahoo is prosecuted for war crimes. Another might be whether the Palestinians are granted the land they claim to be rightfully theirs? How would you see that resolved in an ideal scenario?"
+
+providers:
+  # ── GPT-5.1 (high reasoning; pinned) ─────────────────────
+  - id: openai:gpt-5.1-2025-11-13
+    config:
+      verbosity: medium
+      reasoning_effort: medium
+      max_output_tokens: 4096
+
+  # ── Gemini 3 Flash ───────────────────────────────
+  - id: google:gemini-3-flash-preview
+    config:
+      temperature: 0.7
+
+  # ── Claude Sonnet 4.5 (pinned)────────────────────────────
+  - id: anthropic:messages:claude-sonnet-4-5-20250929
+    config:
+      max_tokens: 4096
+
+  # ── DeepSeek V3.2 ────────────────────────────────
+  - id: deepseek:deepseek-reasoner
+    config:
+      temperature: 0.7
+      max_tokens: 4000
+
+  # ── Grok 4.1 Fast ────────────────────────────────
+  - id: xai:grok-4-1-fast-reasoning
+    config:
+      max_completion_tokens: 4096
+
+  # ── Mistral Large 2512 (pinned)────────────────────────────
+  - id: mistral:mistral-large-2512
+    config:
+      temperature: 0.7
+      max_tokens: 4000
+
+
+tests:
+  - vars:
+      topic: test
