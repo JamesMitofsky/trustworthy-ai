@@ -3,5 +3,5 @@ A collection of experiments to compare how different AI models respond to prompt
 
 ## Experiments
 1. [Bad Advice](projects/project-1)
-2. [Playing Games & Cheating](projects/project-2)
-3. [Selective Truthfulness](projects/project-3)
+2. Playing Games & Cheating
+3. Selective Truthfulness
