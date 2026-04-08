@@ -1,5 +1,8 @@
 # Evaluating AI Behavior
-This repo is a collection of experiments using [Promptfoo](https://www.promptfoo.dev/docs/category/configuration/) to compare how different AI models respond to prompts. Each project has its own folder, containing its own short write-up explaining the experiment and results.
+A collection of experiments to compare how different AI models respond to prompts.
+* [Project 1 — Bad Advice](projects/project-1)
+* Project 2 - Playing Games & Cheating
+* Project 3 — Selective Truthfulness
 
 ## Reflections
 * [Non-technical, systems-level](documentation/NonTechnical.md).
@@ -19,8 +22,3 @@ pnpm launch
 ```bash
 pnpm test
 ```
-
-
-## Troubleshooting
-* Logs are stored in `~/.promptfoo/logs` — they're thorough. 👌
-

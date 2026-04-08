@@ -1,4 +1,4 @@
-# Technical Details
+# Technical Documentation
 
 ## The Importance of Version Pinning
 Aside from major version iterations, models undergo regular small updates. To avoid drift between answers, model versions should be pinned. Among the models used here, only Anthropic and OpenAI supported this feature. Meanwhile, other providers such as Google and XAI (Grok) only allowed selecting a major version. The most offensive case was DeepSeek, which did not support any version selection at all, using an alias to access its most recent version.
@@ -26,3 +26,7 @@ Here's an example grouping:
 - DeepSeek V3.2
 - XAI Grok 4.1 Fast Reasoning
 - Mistral Large (2512)
+ 
+## Troubleshooting
+* Logs are stored in `~/.promptfoo/logs` — they're thorough. 👌
+
