@@ -1,0 +1,15 @@
+# Last updated April 2026
+providers:
+  - id: openai:o3-mini
+    config:
+      reasoning_effort: medium
+      max_completion_tokens: 4096
+
+  # Local
+  - id: ollama:chat:deepseek-r1:8B
+    config:
+      reasoning_effort: medium
+      max_completion_tokens: 4096
+
+
+  
