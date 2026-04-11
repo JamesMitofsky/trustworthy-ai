@@ -9,11 +9,14 @@ pnpm install promptfoo
 2.  Update `.env.example` to be `.env`. Add API keys. Note: These env names are sacred to [PF's expected format](https://www.promptfoo.dev/docs/providers/).
 3.  Navigate to the desired directory (this is how PromptFoo finds the right suite) and run the init:
 ```bash
-pnpm launch
+pnpm cold-start
 ```
-1.  Subsequent evaluations should use:
-```bash
-pnpm test
+
+Otherwise, run:
+```r NOTE: using 'r' here because otherwise 'eval' renders like a sacred word in markdown renderer
+pnpm promptfoo view # see already run evaluations
+
+pnpm promptfoo eval # run evaluations
 ```
 
 ## The Importance of Version Pinning
