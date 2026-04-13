@@ -1,24 +1,5 @@
 # Technical Documentation
 
-
-##  Getting started
-1.  Install [Promptfoo](https://www.promptfoo.dev/docs/category/configuration/). I had trouble with node 24; run `nvm use 22`.
-```bash
-pnpm install promptfoo
-```
-2.  Update `.env.example` to be `.env`. Add API keys. Note: These env names are sacred to [PF's expected format](https://www.promptfoo.dev/docs/providers/).
-3.  Navigate to the desired directory (this is how PromptFoo finds the right suite) and run the init:
-```bash
-pnpm cold-start
-```
-
-Otherwise, run:
-```r NOTE: using 'r' here because otherwise 'eval' renders like a sacred word in markdown renderer
-pnpm promptfoo view # see already run evaluations
-
-pnpm promptfoo eval # run evaluations
-```
-
 ## The Importance of Version Pinning
 Aside from major version iterations, models undergo regular small updates. To avoid drift between answers, model versions should be pinned. Among the models used here, only Anthropic and OpenAI supported this feature. Meanwhile, other providers such as Google and XAI (Grok) only allowed selecting a major version. The most offensive case was DeepSeek, which did not support any version selection at all, using an alias to access its most recent version.
 
@@ -49,3 +30,4 @@ Here's an example grouping:
 ## Troubleshooting
 * Logs are stored in `~/.promptfoo/logs` — they're thorough. 👌
 
+* Sometimes need to rebuild sqlite3: `pnpm rebuild better-sqlite3`
