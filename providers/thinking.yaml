@@ -1,30 +1,30 @@
 # Last updated April 2026
-providers:
-  # ── OpenAI o3-mini ───────────────────────────────────────
-  - id: openai:o3-mini
-    config:
-      reasoning_effort: medium
-      max_completion_tokens: 4096
 
-  # ── Gemini 2.0 Flash (reasoning) ────────────────────────
-  - id: google:gemini-2.0-flash-thinking-exp-01-21
-    config:
-      temperature: 0.7
+# ── OpenAI o3-mini ───────────────────────────────────────
+- id: openai:o3-mini
+  config:
+    reasoning_effort: medium
+    max_completion_tokens: 4096
 
-  # ── Claude 3.7 Sonnet (pinned) ───────────────────────────
-  - id: anthropic:claude-3-7-sonnet-20250219
-    config:
-      thinking:
-        type: enabled
-        budget_tokens: 16000
-      max_tokens: 20000
+# ── Gemini 2.0 Flash (reasoning) ────────────────────────
+- id: google:gemini-2.0-flash-thinking-exp-01-21
+  config:
+    temperature: 0.7
 
-  # ── DeepSeek R1 ────────────────────────────────── reason
-  - id: deepseek:deepseek-reasoner
-    config:
-      max_tokens: 4000
+# ── Claude 3.7 Sonnet (pinned) ───────────────────────────
+- id: anthropic:claude-3-7-sonnet-20250219
+  config:
+    thinking:
+      type: enabled
+      budget_tokens: 16000
+    max_tokens: 20000
 
-  # ── Grok 3 (reasoning) ───────────────────────────────────
-  - id: xai:grok-3-reasoning
-    config:
-      max_completion_tokens: 4096
+# ── DeepSeek R1 ────────────────────────────────── reason
+- id: deepseek:deepseek-reasoner
+  config:
+    max_tokens: 4000
+
+# ── Grok 3 (reasoning) ───────────────────────────────────
+- id: xai:grok-3-reasoning
+  config:
+    max_completion_tokens: 4096
