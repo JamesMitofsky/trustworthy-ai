@@ -33,7 +33,7 @@ done
 
 # Render an interactive numbered menu. `select` is a bash builtin that loops
 # until the user picks a valid option (or Ctrl+C's out).
-echo "Select a promptfoo config to run:"
+echo "Select a scenario to run:"
 PS3=$'\n> '
 select label in "${labels[@]}"; do
   if [ -n "$label" ]; then
