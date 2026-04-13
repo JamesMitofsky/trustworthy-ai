@@ -26,6 +26,19 @@ Here's an example grouping:
 - DeepSeek V3.2
 - XAI Grok 4.1 Fast Reasoning
 - Mistral Large (2512)
+
+### Multiple Judges
+Scores can be averaged across judges. Eg.
+```yaml
+assert:
+  - type: llm-rubric
+    value: "Response quality assessment"
+    provider:
+      - openai:gpt-4o-mini-2024-07-18
+      - anthropic:claude-sonnet-4-5-20250929
+      - google:gemini-3-flash-preview
+    threshold: 0.7  # Average score across all judges
+```
  
 ## Troubleshooting
 * Logs are stored in `~/.promptfoo/logs` — they're thorough. 👌
